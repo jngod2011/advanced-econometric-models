@@ -33,6 +33,7 @@ estimate_expected_returns_and_covariances_of_returns_based_on_Multivariate_Multi
   # Estimate covariance matrix of errors: Sigma = E'E/T
   Sigma=(t(Ehat)%*%Ehat)/(T)
   ExpRet= (DM%*%Bhat)
-  
+  ExpRet <- apply(ExpRet, 2, mean)
+
   return(list(ExpRet, Sigma))
 }
