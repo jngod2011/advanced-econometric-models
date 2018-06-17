@@ -3,7 +3,7 @@
 # Load library for time-varying volatility models
 library(fGarch) 
 
-estimate_expected_returns_and_covariances_of_returns_based_on_Multivariate_Multiple_Regression_Model <- function(econometric_data) {
+estimate_expected_returns_and_covariances_of_returns_based_on_Constant_Conditional_Correlation_Model <- function(econometric_data) {
   
   stocks_returns <- econometric_data[, 6:8]
   names(stocks_returns) <- c("Apple_Returns", "Exxon_Mobil_Returns", "Microsoft_Returns")
